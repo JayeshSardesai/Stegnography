@@ -1,4 +1,4 @@
-## StegoSec: ChaCha20 Steganography Web Tool
+# StegoSec: ChaCha20 Steganography Web Tool
 
 StegoSec is a web-based steganography application that allows you to hide a secret message within an image file and retrieve it later. The project uses a powerful combination of Least Significant Bit (LSB) steganography for embedding the data and the modern ChaCha20 stream cipher for encrypting the message, ensuring both secrecy and security.
 
