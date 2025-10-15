@@ -31,7 +31,7 @@ The project follows a standard Flask web application structure:
 
 ```bash
 
-steganography_project/
+Steganography/
 ├── app.py              # Main Python Flask server
 │
 ├── templates/
