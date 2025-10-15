@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StegoSec - Cyber Steganography Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>StegoSec</h1>
+            <p>Hide Your Secrets in Plain Sight</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-link active" onclick="openTab(event, 'encrypt-tab')">Encrypt</button>
+            <button class="tab-link" onclick="openTab(event, 'decrypt-tab')">Decrypt</button>
+        </div>
+
+        <div id="encrypt-tab" class="tab-content active">
+            <h2>Hide a Message in an Image</h2>
+            <div class="io-panel">
+                <div class="panel-left">
+                    <label for="encrypt-upload" class="file-label">
+                        1. Choose Cover Image
+                        <input type="file" id="encrypt-upload" accept="image/png, image/jpeg">
+                    </label>
+                    <canvas id="encrypt-canvas-preview"></canvas>
+                    <textarea id="secret-message" placeholder="2. Enter your secret message here..."></textarea>
+                    <input type="password" id="encrypt-key" placeholder="3. Enter your secret key">
+                    <button id="encrypt-button" class="action-button">Encrypt Image</button>
+                </div>
+                <div class="panel-right">
+                    <h3>Result</h3>
+                    <canvas id="encrypted-canvas-result"></canvas>
+                    <a id="download-link" class="action-button disabled">Download Image</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="decrypt-tab" class="tab-content">
+            <h2>Reveal a Message from an Image</h2>
+            <div class="io-panel">
+                <div class="panel-left">
+                    <label for="decrypt-upload" class="file-label">
+                        1. Choose Encrypted Image
+                        <input type="file" id="decrypt-upload" accept="image/png, image/jpeg">
+                    </label>
+                    <canvas id="decrypt-canvas-preview"></canvas>
+                    <input type="password" id="decrypt-key" placeholder="2. Enter your secret key">
+                    <button id="decrypt-button" class="action-button">Decrypt Image</button>
+                </div>
+                <div class="panel-right">
+                    <h3>Revealed Message</h3>
+                    <textarea id="revealed-message" readonly placeholder="Your secret message will appear here..."></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div id="status-message"></div>
+
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
