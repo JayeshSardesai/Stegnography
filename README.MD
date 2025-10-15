@@ -23,7 +23,7 @@ The application features a sleek, mobile-responsive web interface with a dark, n
 ## Project Structure
 
 The project follows a standard Flask web application structure:
-
+```bash
 steganography_project/
 ├── app.py              # Main Python Flask server
 │
@@ -31,9 +31,9 @@ steganography_project/
 │   └── index.html      # Frontend HTML structure
 │
 └── static/
-├── style.css       # CSS for styling
-└── script.js       # JavaScript for frontend logic
-
+    ├── style.css       # CSS for styling
+    └── script.js       # JavaScript for frontend logic
+```
 
 ## Setup and Usage
 
@@ -49,12 +49,12 @@ Navigate to the project's main directory in your terminal or command prompt and 
 
 ```bash
 pip install Flask Flask-Cors opencv-python numpy
+```
 3. Run the Backend Server
 Once the libraries are installed, start the Flask web server by running the following command in the same terminal:
-
-Bash
-
+```bash
 python app.py
+```
 You should see output indicating that the server is running, typically on http://127.0.0.1:5000. Keep this terminal window open.
 
 4. Open the Web Application
