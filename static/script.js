@@ -8,8 +8,23 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('.tab-link').click();
+
+    // --- Password visibility toggle ---
+    document.querySelectorAll('.toggle-password').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const passwordInput = toggle.previousElementSibling;
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggle.textContent = '🙈';
+            } else {
+                passwordInput.type = 'password';
+                toggle.textContent = '👁️';
+            }
+        });
+    });
 });
 
 const statusMessage = document.getElementById('status-message');

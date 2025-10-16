@@ -28,7 +28,10 @@
                     </label>
                     <canvas id="encrypt-canvas-preview"></canvas>
                     <textarea id="secret-message" placeholder="2. Enter your secret message here..."></textarea>
-                    <input type="password" id="encrypt-key" placeholder="3. Enter your secret key">
+                    <div class="password-container">
+                        <input type="password" id="encrypt-key" placeholder="3. Enter your secret key">
+                        <span class="toggle-password">👁️</span>
+                    </div>
                     <button id="encrypt-button" class="action-button">Encrypt Image</button>
                 </div>
                 <div class="panel-right">
@@ -48,7 +51,10 @@
                         <input type="file" id="decrypt-upload" accept="image/png, image/jpeg">
                     </label>
                     <canvas id="decrypt-canvas-preview"></canvas>
-                    <input type="password" id="decrypt-key" placeholder="2. Enter your secret key">
+                    <div class="password-container">
+                        <input type="password" id="decrypt-key" placeholder="2. Enter your secret key">
+                        <span class="toggle-password">👁️</span>
+                    </div>
                     <button id="decrypt-button" class="action-button">Decrypt Image</button>
                 </div>
                 <div class="panel-right">
